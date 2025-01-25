@@ -6,7 +6,7 @@ using Utils;
 public class Projetil : MonoBehaviour, IPoolItem
 {
     [SerializeField]private float speed;
-    private int damage;
+    private int damage = 1;
 
     public void GetFromPool()
     {
@@ -28,5 +28,14 @@ public class Projetil : MonoBehaviour, IPoolItem
             ReturnToPool();
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            other.GetComponent<Health>().TakeDamage(damage);
+        }
+        
+        ReturnToPool();
     }
 }

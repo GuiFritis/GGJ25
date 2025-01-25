@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2562409598991455820}
   - component: {fileID: 5780414839923021960}
   - component: {fileID: 2007938983090346332}
+  - component: {fileID: 3828804646419101249}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -99,6 +100,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10.09
+--- !u!58 &3828804646419101249
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030563473100833824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004, y: -0.02}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1 &6825023811777446999
 GameObject:
   m_ObjectHideFlags: 0
