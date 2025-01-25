@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -215,16 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &860759317 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-  m_PrefabInstance: {fileID: 1894567132}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1043173320 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-  m_PrefabInstance: {fileID: 4355820927035206063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1533572541
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.98
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -323,26 +313,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circle2
       objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4494482
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4494482
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9433962
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784391419040902450, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1043173320}
-    - target: {fileID: 8212477461472567572, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: _playerId
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -358,7 +328,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.32
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -400,22 +370,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circle1
       objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.g
-      value: 0.87848186
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: m_Color.r
-      value: 0.42626378
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784391419040902450, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 860759317}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

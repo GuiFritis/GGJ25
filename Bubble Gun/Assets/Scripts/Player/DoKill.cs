@@ -35,6 +35,9 @@ public class DoKill : MonoBehaviour
 
     private void Kill()
     {
+        transform.DOKill();
+        _spriteRendererBg.DOKill();
+        _spriteRendererFg.DOKill();
         transform.DOScale(Vector3.one * _popScale, .3f).SetEase(Ease.OutCubic).OnComplete(() => Destroy(gameObject));
         _spriteRendererBg.DOFade(0, .3f).SetEase(Ease.OutCubic);
         _spriteRendererFg.DOFade(0, .3f).SetEase(Ease.OutCubic);
