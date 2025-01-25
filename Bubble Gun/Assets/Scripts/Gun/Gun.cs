@@ -6,9 +6,7 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private float maxAngle;
     [SerializeField] private float wobleSpeed;
-    [SerializeField] private int damage;
     [SerializeField] private Transform target;
-    [SerializeField] private Transform gunPivot;
 
     void Update()
     {
@@ -17,16 +15,8 @@ public class Gun : MonoBehaviour
         float angle = Mathf.Sin(Time.time * wobleSpeed) * maxAngle;
         angle += transform.rotation.z;
         rotationZ += angle;
-        
+
         transform.rotation = Quaternion.Euler(0f,0f,rotationZ);
 
-        //Woble();
-    }
-
-    void Woble() {
-        float angle = Mathf.Sin(Time.time * wobleSpeed) * maxAngle;
-        angle += transform.rotation.z;
-        Debug.Log(angle);
-        transform.rotation = Quaternion.Euler(0,0,angle);
     }
 }
