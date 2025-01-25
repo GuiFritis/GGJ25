@@ -11,13 +11,8 @@ public class Gun : MonoBehaviour
     [SerializeField] private Transform gunPivot;
     [SerializeField] private Projetil gob;
     private Inputs _inputs;
-    [SerializeField] private PlayerId _playerId;
     [SerializeField] private Transform FirePoint;
-    
-
-    
-
-
+    [SerializeField] private PlayerMovement _playerMovement;
 
     void Start()
     {
@@ -30,7 +25,7 @@ public class Gun : MonoBehaviour
         {
             return;
         }
-        
+
         Vector3 difference = target.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f,0f,rotationZ);
@@ -71,7 +66,7 @@ public class Gun : MonoBehaviour
         _inputs = new Inputs();
         _inputs.Enable();
 
-        if(_playerId == PlayerId.PLAYER_1)
+        if(_playerMovement.PlayerId == PlayerId.PLAYER_1)
         {
             SetPlayer1Inputs();
         }
