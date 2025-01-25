@@ -318,13 +318,13 @@ MonoBehaviour:
   - spriteBackground: {fileID: -1491948355, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
     spriteForeground: {fileID: 1232044577, guid: 45754e06d749c49c29fa713a5494e526, type: 3}
     healthThreshold: 8
-    scale: 6.63
-    colliderRadius: 0.08
+    scale: 6.2
+    colliderRadius: 0.072
   - spriteBackground: {fileID: -1600491757, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
     spriteForeground: {fileID: -805242811, guid: 45754e06d749c49c29fa713a5494e526, type: 3}
-    healthThreshold: 3
-    scale: 6.63
-    colliderRadius: 0.08
+    healthThreshold: 4
+    scale: 7
+    colliderRadius: 0.055
   _scaleLossRate: 0.1
 --- !u!58 &2081450425 stripped
 CircleCollider2D:
