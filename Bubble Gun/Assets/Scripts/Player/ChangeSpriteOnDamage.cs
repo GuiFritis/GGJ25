@@ -39,6 +39,7 @@ public class ChangeSpriteOnDamage : MonoBehaviour
     private void Start()
     {
         _health.OnDamage += DamageTaken;
+        _health.OnDamage += AlmostDead;
     }
 
     private void Update()
@@ -72,6 +73,13 @@ public class ChangeSpriteOnDamage : MonoBehaviour
         transform.localScale = Vector2.one * _damagedSprites[_spriteIndex].scale;
         _collider.radius = _damagedSprites[_spriteIndex].colliderRadius;
         _spriteIndex++;
+    }
+
+    private void AlmostDead(int currentHealth) {
+        if(currentHealth == 1)
+        {
+            _spriteRendererBg.DOColor(_health.AlmostDeadColor, 0.3f).SetLoops(-1, LoopType.Yoyo);
+        }
     }
 }
 

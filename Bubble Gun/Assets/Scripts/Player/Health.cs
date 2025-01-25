@@ -8,6 +8,9 @@ public class Health : MonoBehaviour
     [SerializeField] private int _maxHealth = 12;
     private int _currentHealth;
 
+    [SerializeField] public Color AlmostDeadColor;
+
+
     public Action<int> OnDamage;
     public Action OnKilled;
 
@@ -24,5 +27,6 @@ public class Health : MonoBehaviour
         {
             OnKilled?.Invoke();
         }
+        
     }
 }
