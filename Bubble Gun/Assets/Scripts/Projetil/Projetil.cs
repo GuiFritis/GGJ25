@@ -7,6 +7,11 @@ public class Projetil : MonoBehaviour, IPoolItem
 {
     [SerializeField]private float speed;
     private int damage = 1;
+    private TrailRenderer trail;
+
+    private void Start() {
+        trail = GetComponentInChildren<TrailRenderer>(true);
+    }
 
     public void GetFromPool()
     {
@@ -15,6 +20,7 @@ public class Projetil : MonoBehaviour, IPoolItem
 
     public void ReturnToPool()
     {
+        trail.Clear();
         gameObject.SetActive(false);
     }
 
