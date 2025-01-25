@@ -13,8 +13,6 @@ public class Gun : MonoBehaviour
     private Inputs _inputs;
     [SerializeField] private Transform FirePoint;
     [SerializeField] private PlayerMovement _playerMovement;
-    [SerializeField] private float coolDownTime;
-    private float tempoDecorrido;
 
     void Start()
     {
@@ -37,7 +35,6 @@ public class Gun : MonoBehaviour
         rotationZ += angle;
 
         gunPivot.rotation = Quaternion.Euler(0f,0f,rotationZ);
-        tempoDecorrido += Time.deltaTime;
 
     }
 
@@ -46,12 +43,10 @@ public class Gun : MonoBehaviour
     private void shoot(InputAction.CallbackContext context)
     {
 
-        if(tempoDecorrido >= coolDownTime){
-            tempoDecorrido = 0;
-            Projetil newGob = Instantiate(gob,FirePoint.position, FirePoint.rotation);
-            newGob.transform.rotation = gunPivot.transform.rotation;
-            Debug.Log("Apertou");
-        }
+
+        Projetil newGob = Instantiate(gob,FirePoint.position, FirePoint.rotation);
+        newGob.transform.rotation = gunPivot.transform.rotation;
+        Debug.Log("Apertou");
     
 
     }

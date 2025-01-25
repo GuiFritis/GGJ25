@@ -168,9 +168,8 @@ MonoBehaviour:
   target: {fileID: 0}
   gunPivot: {fileID: 7685432103946018980}
   gob: {fileID: 2007938983090346332, guid: d5a6699e043223140ab0ab764304b902, type: 3}
+  _playerId: 0
   FirePoint: {fileID: 5379737683839195530}
-  _playerMovement: {fileID: 0}
-  coolDownTime: 0.25
 --- !u!1 &6342512860959920866
 GameObject:
   m_ObjectHideFlags: 0
