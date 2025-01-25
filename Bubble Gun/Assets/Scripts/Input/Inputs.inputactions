@@ -1,0 +1,78 @@
+{
+    "name": "Inputs",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "975727bb-8f98-45af-8be6-5197ee3dadc6",
+            "actions": [
+                {
+                    "name": "Move_Vertical",
+                    "type": "Value",
+                    "id": "c039be3e-0323-43bd-9cae-8958cbbc9dde",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "3aaad63e-95b2-47b0-aa0c-eb9d4c48fc3c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9e0248c4-04ea-4327-9d42-5d560d2dcee0",
+                    "path": "W",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "33024eed-9f7b-4736-ac01-137f37c6c4f6",
+                    "path": "S",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e5f43371-68f6-4443-b52a-32b427d71b3f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "bdbf8024-39aa-4228-b434-4f905d0bae86",
+                    "path": "<Joystick>/{Forward}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
