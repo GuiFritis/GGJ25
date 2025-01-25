@@ -740,6 +740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 77744718152952494, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_Name
       value: Circle1
@@ -748,6 +752,26 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 673193121}
+    - target: {fileID: 5771397319592998582, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506390954556795412, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229337229898180812, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273087204911980638, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: _damagedSprites.Array.data[0].colliderRadius
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273087204911980638, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: _damagedSprites.Array.data[1].colliderRadius
+      value: 0.045
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
