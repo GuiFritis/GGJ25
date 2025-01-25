@@ -8,7 +8,6 @@ public class Projetil : MonoBehaviour
 
     [SerializeField]private float speed;
     private int damage;
-    public Vector3 dir;
     
 
 
@@ -23,8 +22,6 @@ public class Projetil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dir = player.position - transform.position;
-        transform.Translate(dir * speed  * Time.deltaTime);
-        
+        transform.Translate(Vector3.right * speed  * Time.deltaTime);
     }
 }
