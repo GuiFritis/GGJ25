@@ -25,7 +25,7 @@ public class Projetil : MonoBehaviour, IPoolItem
 
 
         if(Mathf.Abs(transform.position.x) > 12 || Mathf.Abs(transform.position.y) > 5)
-            ReturnToPool();
+            ProjetilPool.Instance.ReturnPoolItem(this);
 
 
     }
@@ -36,6 +36,6 @@ public class Projetil : MonoBehaviour, IPoolItem
             other.GetComponent<Health>().TakeDamage(damage);
         }
         
-        ReturnToPool();
+        ProjetilPool.Instance.ReturnPoolItem(this);
     }
 }
