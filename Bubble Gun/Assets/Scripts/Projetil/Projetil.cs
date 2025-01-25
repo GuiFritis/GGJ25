@@ -23,7 +23,10 @@ public class Projetil : MonoBehaviour, IPoolItem
     {
         transform.Translate(Vector3.right * speed  * Time.deltaTime);
 
-        if(transform.position.x > 8)
-            gameObject.SetActive(false);
+
+        if(Mathf.Abs(transform.position.x) > 12 || Mathf.Abs(transform.position.y) > 5)
+            ReturnToPool();
+
+
     }
 }
