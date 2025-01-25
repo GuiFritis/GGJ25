@@ -26,6 +26,11 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        if(target == null)
+        {
+            return;
+        }
+        
         Vector3 difference = target.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f,0f,rotationZ);
