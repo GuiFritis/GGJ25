@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ChangeSpriteOnDamage : MonoBehaviour
 {
@@ -57,6 +58,9 @@ public class ChangeSpriteOnDamage : MonoBehaviour
         else
         {
             transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
+            // We tried to use DOTween here, but it didn't work as expected
+            // transform.DOKill();
+            // transform.DOScale(-(Vector3)Vector2.one * _scaleLossRate, .1f).SetEase(Ease.OutElastic).SetRelative(true);
         }
     }
 

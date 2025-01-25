@@ -325,6 +325,11 @@ MonoBehaviour:
     healthThreshold: 4
     scale: 7
     colliderRadius: 0.055
+  - spriteBackground: {fileID: 656143131, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
+    spriteForeground: {fileID: 794974070, guid: 45754e06d749c49c29fa713a5494e526, type: 3}
+    healthThreshold: 0
+    scale: 5
+    colliderRadius: 0
   _scaleLossRate: 0.1
 --- !u!58 &2081450425 stripped
 CircleCollider2D:
@@ -347,6 +352,22 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1332495108740699925, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
   m_PrefabInstance: {fileID: 4355820927035206063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2081450430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081450422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52283f35ce5f741ac9018930eac3cd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 2081450426}
+  _spriteRendererBg: {fileID: 1682104420}
+  _spriteRendererFg: {fileID: 2081450428}
+  _popScale: 15
 --- !u!1001 &4355820927035206063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -422,6 +443,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2081450423}
+    - targetCorrespondingSourceObject: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2081450430}
   m_SourcePrefab: {fileID: 100100000, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
