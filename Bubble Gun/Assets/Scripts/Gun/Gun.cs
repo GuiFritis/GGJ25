@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviour 
 {
     [SerializeField] private float maxAngle;
     [SerializeField] private float wobleSpeed;
@@ -12,6 +12,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private Projetil gob;
     private Inputs _inputs;
     [SerializeField] private PlayerId _playerId;
+    [SerializeField] private Transform FirePoint;
+    
+
     
 
 
@@ -41,7 +44,7 @@ public class Gun : MonoBehaviour
     {
 
 
-        Projetil newGob = Instantiate(gob,transform.position, transform.rotation);
+        Projetil newGob = Instantiate(gob,FirePoint.position, FirePoint.rotation);
         newGob.transform.rotation = gunPivot.transform.rotation;
         Debug.Log("Apertou");
     
@@ -55,7 +58,7 @@ public class Gun : MonoBehaviour
     }
       private void SetPlayer2Inputs()
     {
-        //_inputs.Player2.Shoot.started += shoot;
+        _inputs.Player2.Shoot.started += shoot;
         
     }
         private void SetInputs()
