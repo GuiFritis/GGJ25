@@ -10,7 +10,8 @@ public class ChangeSpriteOnDamage : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRendererFg;
     [SerializeField] private CircleCollider2D _collider;
     [SerializeField] private List<SpriteChange> _damagedSprites = new();
-    [SerializeField] private float _scaleLossRate = 0.00005f;
+    [SerializeField] private float _scaleLossRate = 0.1f;
+    [SerializeField] private float _colliderLossRate = 0.01f;
     private int _spriteIndex = 0;
 
     private void OnValidate()
@@ -60,6 +61,7 @@ public class ChangeSpriteOnDamage : MonoBehaviour
         {
             // transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
             _spriteRendererFg.transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
+            _collider.radius -= _colliderLossRate;
             // We tried to use DOTween here, but it didn't work as expected
             // transform.DOKill();
             // transform.DOScale(-(Vector3)Vector2.one * _scaleLossRate, .1f).SetEase(Ease.OutElastic).SetRelative(true);
@@ -70,7 +72,7 @@ public class ChangeSpriteOnDamage : MonoBehaviour
     {
         _spriteRendererBg.sprite = _damagedSprites[_spriteIndex].spriteBackground;
         _spriteRendererFg.sprite = _damagedSprites[_spriteIndex].spriteForeground;
-        transform.localScale = Vector2.one * _damagedSprites[_spriteIndex].scale;
+        _spriteRendererFg.transform.localScale = Vector2.one * _damagedSprites[_spriteIndex].scale;
         _collider.radius = _damagedSprites[_spriteIndex].colliderRadius;
         _spriteIndex++;
     }
