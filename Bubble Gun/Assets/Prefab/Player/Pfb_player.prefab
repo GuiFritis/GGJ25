@@ -263,7 +263,8 @@ MonoBehaviour:
   _health: {fileID: 2715898341896024955}
   _spriteRendererBg: {fileID: 6506390954556795412}
   _spriteRendererFg: {fileID: 77744718152952494}
-  _popScale: 15
+  _popScale: 2
+  _gun: {fileID: 4784391419040902450}
 --- !u!1 &7574227506406437883
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +358,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 46323454578981701}
     m_Modifications:
     - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
+      propertyPath: wobleSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
+      propertyPath: coolDownTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
       propertyPath: _playerMovement
       value: 
       objectReference: {fileID: 8212477461472567572}
@@ -443,6 +452,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
+--- !u!114 &4784391419040902450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
+  m_PrefabInstance: {fileID: 5616508384644107481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e53071e57c5cdc2ba5af038981a2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7475796442991805935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3048521194577905974, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}

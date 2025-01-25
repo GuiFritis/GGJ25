@@ -9,6 +9,7 @@ public class DoKill : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRendererBg;
     [SerializeField] private SpriteRenderer _spriteRendererFg;
     [SerializeField] private float _popScale;
+    [SerializeField] private Gun _gun;
 
     private void OnValidate()
     {
@@ -26,6 +27,11 @@ public class DoKill : MonoBehaviour
         {
             _health = GetComponent<Health>();
         }
+
+        if(_gun == null) 
+        {
+            _gun = GetComponentInChildren<Gun>();
+        }
     }
 
     private void Start()
@@ -35,6 +41,7 @@ public class DoKill : MonoBehaviour
 
     private void Kill()
     {
+        _gun.gameObject.SetActive(false);
         transform.DOKill();
         _spriteRendererBg.DOKill();
         _spriteRendererFg.DOKill();
