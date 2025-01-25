@@ -136,6 +136,98 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Player2"",
+            ""id"": ""f6e47d81-4d5e-4169-b6e7-4bec09aa4aa5"",
+            ""actions"": [
+                {
+                    ""name"": ""Move_Vertical"",
+                    ""type"": ""Value"",
+                    ""id"": ""650861b1-26ea-4942-ad7b-63d81fdb921f"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Move_Horizontal"",
+                    ""type"": ""Button"",
+                    ""id"": ""a958c688-9ad4-4f57-bbfc-818a7f85cbdf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""baea5906-41f5-48a4-aab5-692f6408722f"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Vertical"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""d54f302e-6781-4f6e-90fc-a6e70fd45677"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Vertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""40fad605-7dfd-4df2-8982-b8a9e6a6cdf7"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Vertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""0cf4f938-bfc8-4ac0-8537-87a0b956a15d"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2907e671-2197-4e81-aaed-0d99503f9f6d"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""e2e8f008-360e-4cd4-96bb-a8502ad29fe9"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -144,6 +236,10 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
         m_Player1_Move_Vertical = m_Player1.FindAction("Move_Vertical", throwIfNotFound: true);
         m_Player1_Move_Horizontal = m_Player1.FindAction("Move_Horizontal", throwIfNotFound: true);
+        // Player2
+        m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
+        m_Player2_Move_Vertical = m_Player2.FindAction("Move_Vertical", throwIfNotFound: true);
+        m_Player2_Move_Horizontal = m_Player2.FindAction("Move_Horizontal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -255,7 +351,66 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         }
     }
     public Player1Actions @Player1 => new Player1Actions(this);
+
+    // Player2
+    private readonly InputActionMap m_Player2;
+    private List<IPlayer2Actions> m_Player2ActionsCallbackInterfaces = new List<IPlayer2Actions>();
+    private readonly InputAction m_Player2_Move_Vertical;
+    private readonly InputAction m_Player2_Move_Horizontal;
+    public struct Player2Actions
+    {
+        private @Inputs m_Wrapper;
+        public Player2Actions(@Inputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move_Vertical => m_Wrapper.m_Player2_Move_Vertical;
+        public InputAction @Move_Horizontal => m_Wrapper.m_Player2_Move_Horizontal;
+        public InputActionMap Get() { return m_Wrapper.m_Player2; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player2Actions set) { return set.Get(); }
+        public void AddCallbacks(IPlayer2Actions instance)
+        {
+            if (instance == null || m_Wrapper.m_Player2ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Player2ActionsCallbackInterfaces.Add(instance);
+            @Move_Vertical.started += instance.OnMove_Vertical;
+            @Move_Vertical.performed += instance.OnMove_Vertical;
+            @Move_Vertical.canceled += instance.OnMove_Vertical;
+            @Move_Horizontal.started += instance.OnMove_Horizontal;
+            @Move_Horizontal.performed += instance.OnMove_Horizontal;
+            @Move_Horizontal.canceled += instance.OnMove_Horizontal;
+        }
+
+        private void UnregisterCallbacks(IPlayer2Actions instance)
+        {
+            @Move_Vertical.started -= instance.OnMove_Vertical;
+            @Move_Vertical.performed -= instance.OnMove_Vertical;
+            @Move_Vertical.canceled -= instance.OnMove_Vertical;
+            @Move_Horizontal.started -= instance.OnMove_Horizontal;
+            @Move_Horizontal.performed -= instance.OnMove_Horizontal;
+            @Move_Horizontal.canceled -= instance.OnMove_Horizontal;
+        }
+
+        public void RemoveCallbacks(IPlayer2Actions instance)
+        {
+            if (m_Wrapper.m_Player2ActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IPlayer2Actions instance)
+        {
+            foreach (var item in m_Wrapper.m_Player2ActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Player2ActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public Player2Actions @Player2 => new Player2Actions(this);
     public interface IPlayer1Actions
+    {
+        void OnMove_Vertical(InputAction.CallbackContext context);
+        void OnMove_Horizontal(InputAction.CallbackContext context);
+    }
+    public interface IPlayer2Actions
     {
         void OnMove_Vertical(InputAction.CallbackContext context);
         void OnMove_Horizontal(InputAction.CallbackContext context);
