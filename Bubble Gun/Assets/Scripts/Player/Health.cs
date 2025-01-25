@@ -20,7 +20,6 @@ public class Health : MonoBehaviour
     {
         _currentHealth -= damage;
         OnDamage?.Invoke(_currentHealth);
-
         if(_currentHealth <= 0)
         {
             OnKilled?.Invoke();

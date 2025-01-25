@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     private Inputs _inputs;
     [SerializeField] private PlayerId _playerId;
+    public PlayerId PlayerId => _playerId;
 
     private void Start()
     {
