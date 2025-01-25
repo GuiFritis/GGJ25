@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 569765558}
   - component: {fileID: 569765557}
   m_Layer: 0
-  m_Name: reflexo em baixo
+  m_Name: ReflexFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,6 +304,128 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
   m_PrefabInstance: {fileID: 1894567132}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105378332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105378334}
+  - component: {fileID: 1105378333}
+  - component: {fileID: 1105378335}
+  m_Layer: 0
+  m_Name: Edge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!68 &1105378333
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105378332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.0022748709, y: 1.3238462}
+  - {x: -0.3394921, y: 1.2802672}
+  - {x: -0.63611376, y: 1.1538867}
+  - {x: -0.9263947, y: 0.9341025}
+  - {x: -1.1444116, y: 0.6343065}
+  - {x: -1.2838054, y: 0.3091193}
+  - {x: -1.3119336, y: -0.04389315}
+  - {x: -1.2469617, y: -0.42471272}
+  - {x: -1.0685282, y: -0.78898746}
+  - {x: -0.78906035, y: -1.0697062}
+  - {x: -0.42984506, y: -1.2601249}
+  - {x: 0.010811213, y: -1.3550061}
+  - {x: 0.40390766, y: -1.2816298}
+  - {x: 0.72340405, y: -1.1289753}
+  - {x: 0.9713444, y: -0.9030514}
+  - {x: 1.1763865, y: -0.6088084}
+  - {x: 1.305375, y: -0.2359645}
+  - {x: 1.3213031, y: 0.14203534}
+  - {x: 1.2370839, y: 0.4853754}
+  - {x: 1.0685725, y: 0.78422123}
+  - {x: 0.7907511, y: 1.0694784}
+  - {x: 0.4023697, y: 1.2702186}
+  - {x: 0.022799611, y: 1.3238463}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &1105378334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105378332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1105378335
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105378332}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &1386435142
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +437,7 @@ GameObject:
   - component: {fileID: 1386435144}
   - component: {fileID: 1386435143}
   m_Layer: 0
-  m_Name: Arena sem domo
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +521,7 @@ GameObject:
   - component: {fileID: 1592435596}
   - component: {fileID: 1592435595}
   m_Layer: 0
-  m_Name: DOMO SEM REFLEXO CERTO
+  m_Name: Dome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +605,7 @@ GameObject:
   - component: {fileID: 1706432434}
   - component: {fileID: 1706432433}
   m_Layer: 0
-  m_Name: reflexo em cima
+  m_Name: ReflexDome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,3 +903,4 @@ SceneRoots:
   - {fileID: 1386435144}
   - {fileID: 569765558}
   - {fileID: 1706432434}
+  - {fileID: 1105378334}
