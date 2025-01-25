@@ -44,6 +44,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c3feb59-4511-4bf5-8b2d-4dd309b12ac4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,6 +143,17 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Move_Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""63d615fc-a328-47aa-91aa-190ec9cd783c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -154,6 +174,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""name"": ""Move_Horizontal"",
                     ""type"": ""Button"",
                     ""id"": ""a958c688-9ad4-4f57-bbfc-818a7f85cbdf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""a2caffd0-ad2b-4f29-af6d-044288215c4a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -226,6 +255,28 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Move_Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4f65d02-a440-47c9-baaf-696057df04c6"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2cd9507-ad49-49b2-bc51-9ecf59919698"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -236,10 +287,12 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
         m_Player1_Move_Vertical = m_Player1.FindAction("Move_Vertical", throwIfNotFound: true);
         m_Player1_Move_Horizontal = m_Player1.FindAction("Move_Horizontal", throwIfNotFound: true);
+        m_Player1_Shoot = m_Player1.FindAction("Shoot", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Move_Vertical = m_Player2.FindAction("Move_Vertical", throwIfNotFound: true);
         m_Player2_Move_Horizontal = m_Player2.FindAction("Move_Horizontal", throwIfNotFound: true);
+        m_Player2_Shoot = m_Player2.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -303,12 +356,14 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private List<IPlayer1Actions> m_Player1ActionsCallbackInterfaces = new List<IPlayer1Actions>();
     private readonly InputAction m_Player1_Move_Vertical;
     private readonly InputAction m_Player1_Move_Horizontal;
+    private readonly InputAction m_Player1_Shoot;
     public struct Player1Actions
     {
         private @Inputs m_Wrapper;
         public Player1Actions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move_Vertical => m_Wrapper.m_Player1_Move_Vertical;
         public InputAction @Move_Horizontal => m_Wrapper.m_Player1_Move_Horizontal;
+        public InputAction @Shoot => m_Wrapper.m_Player1_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -324,6 +379,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Horizontal.started += instance.OnMove_Horizontal;
             @Move_Horizontal.performed += instance.OnMove_Horizontal;
             @Move_Horizontal.canceled += instance.OnMove_Horizontal;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -334,6 +392,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Horizontal.started -= instance.OnMove_Horizontal;
             @Move_Horizontal.performed -= instance.OnMove_Horizontal;
             @Move_Horizontal.canceled -= instance.OnMove_Horizontal;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -357,12 +418,14 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private List<IPlayer2Actions> m_Player2ActionsCallbackInterfaces = new List<IPlayer2Actions>();
     private readonly InputAction m_Player2_Move_Vertical;
     private readonly InputAction m_Player2_Move_Horizontal;
+    private readonly InputAction m_Player2_Shoot;
     public struct Player2Actions
     {
         private @Inputs m_Wrapper;
         public Player2Actions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move_Vertical => m_Wrapper.m_Player2_Move_Vertical;
         public InputAction @Move_Horizontal => m_Wrapper.m_Player2_Move_Horizontal;
+        public InputAction @Shoot => m_Wrapper.m_Player2_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -378,6 +441,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Horizontal.started += instance.OnMove_Horizontal;
             @Move_Horizontal.performed += instance.OnMove_Horizontal;
             @Move_Horizontal.canceled += instance.OnMove_Horizontal;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
         }
 
         private void UnregisterCallbacks(IPlayer2Actions instance)
@@ -388,6 +454,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Horizontal.started -= instance.OnMove_Horizontal;
             @Move_Horizontal.performed -= instance.OnMove_Horizontal;
             @Move_Horizontal.canceled -= instance.OnMove_Horizontal;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
         }
 
         public void RemoveCallbacks(IPlayer2Actions instance)
@@ -409,10 +478,12 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     {
         void OnMove_Vertical(InputAction.CallbackContext context);
         void OnMove_Horizontal(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
         void OnMove_Vertical(InputAction.CallbackContext context);
         void OnMove_Horizontal(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
