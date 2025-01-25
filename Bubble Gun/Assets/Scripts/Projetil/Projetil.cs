@@ -8,6 +8,7 @@ public class Projetil : MonoBehaviour, IPoolItem
     [SerializeField]private float speed;
     private int damage = 1;
     private TrailRenderer trail;
+    [SerializeField] private LayerMask _hitLayer;
 
     private void Start() {
         trail = GetComponentInChildren<TrailRenderer>(true);
@@ -28,18 +29,14 @@ public class Projetil : MonoBehaviour, IPoolItem
     void Update()
     {
         transform.Translate(Vector3.right * speed  * Time.deltaTime);
-
-
-        if(Mathf.Abs(transform.position.x) > 12 || Mathf.Abs(transform.position.y) > 5)
-            ProjetilPool.Instance.ReturnPoolItem(this);
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+        if ((_hitLayer.value & (1 << other.gameObject.layer)) > 0)
+        {
             other.GetComponent<Health>().TakeDamage(damage);
+            Debug.LogWarning("Acertou, miseravi");
         }
         
         ProjetilPool.Instance.ReturnPoolItem(this);

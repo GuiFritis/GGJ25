@@ -45,10 +45,10 @@ public class ChangeSpriteOnDamage : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            _health.TakeDamage(1);
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     _health.TakeDamage(1);
+        // }
     }
 
     private void DamageTaken(int currentHealth)
@@ -60,8 +60,8 @@ public class ChangeSpriteOnDamage : MonoBehaviour
         else
         {
             // transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
-            _spriteRendererFg.transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
-            _collider.radius -= _colliderLossRate;
+            // _spriteRendererFg.transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
+            // _collider.radius -= _colliderLossRate;
             // We tried to use DOTween here, but it didn't work as expected
             // transform.DOKill();
             // transform.DOScale(-(Vector3)Vector2.one * _scaleLossRate, .1f).SetEase(Ease.OutElastic).SetRelative(true);
