@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Move_Horizontal",
+                    "type": "Button",
+                    "id": "ab63aef4-8c2a-41dd-8e7c-c264ce934994",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -30,7 +39,7 @@
                 {
                     "name": "negative",
                     "id": "9e0248c4-04ea-4327-9d42-5d560d2dcee0",
-                    "path": "W",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -41,7 +50,7 @@
                 {
                     "name": "positive",
                     "id": "33024eed-9f7b-4736-ac01-137f37c6c4f6",
-                    "path": "S",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -68,6 +77,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Move_Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "a99fb832-791d-4333-af07-a4f2f0e980ce",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a5a1e030-a637-4a1d-9d3d-b934c9cc787f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "391a03f6-b7ba-4c3c-be09-eab715984a36",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

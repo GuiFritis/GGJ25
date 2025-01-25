@@ -35,6 +35,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Move_Horizontal"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab63aef4-8c2a-41dd-8e7c-c264ce934994"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -52,7 +61,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""9e0248c4-04ea-4327-9d42-5d560d2dcee0"",
-                    ""path"": ""W"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -63,7 +72,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""33024eed-9f7b-4736-ac01-137f37c6c4f6"",
-                    ""path"": ""S"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,6 +101,39 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Move_Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""a99fb832-791d-4333-af07-a4f2f0e980ce"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""a5a1e030-a637-4a1d-9d3d-b934c9cc787f"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""391a03f6-b7ba-4c3c-be09-eab715984a36"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -101,6 +143,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         // Player1
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
         m_Player1_Move_Vertical = m_Player1.FindAction("Move_Vertical", throwIfNotFound: true);
+        m_Player1_Move_Horizontal = m_Player1.FindAction("Move_Horizontal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +206,13 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player1;
     private List<IPlayer1Actions> m_Player1ActionsCallbackInterfaces = new List<IPlayer1Actions>();
     private readonly InputAction m_Player1_Move_Vertical;
+    private readonly InputAction m_Player1_Move_Horizontal;
     public struct Player1Actions
     {
         private @Inputs m_Wrapper;
         public Player1Actions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move_Vertical => m_Wrapper.m_Player1_Move_Vertical;
+        public InputAction @Move_Horizontal => m_Wrapper.m_Player1_Move_Horizontal;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +225,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Vertical.started += instance.OnMove_Vertical;
             @Move_Vertical.performed += instance.OnMove_Vertical;
             @Move_Vertical.canceled += instance.OnMove_Vertical;
+            @Move_Horizontal.started += instance.OnMove_Horizontal;
+            @Move_Horizontal.performed += instance.OnMove_Horizontal;
+            @Move_Horizontal.canceled += instance.OnMove_Horizontal;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -187,6 +235,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Move_Vertical.started -= instance.OnMove_Vertical;
             @Move_Vertical.performed -= instance.OnMove_Vertical;
             @Move_Vertical.canceled -= instance.OnMove_Vertical;
+            @Move_Horizontal.started -= instance.OnMove_Horizontal;
+            @Move_Horizontal.performed -= instance.OnMove_Horizontal;
+            @Move_Horizontal.canceled -= instance.OnMove_Horizontal;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -207,5 +258,6 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     public interface IPlayer1Actions
     {
         void OnMove_Vertical(InputAction.CallbackContext context);
+        void OnMove_Horizontal(InputAction.CallbackContext context);
     }
 }
