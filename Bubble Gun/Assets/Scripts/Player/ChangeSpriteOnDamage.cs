@@ -69,7 +69,7 @@ public class ChangeSpriteOnDamage : MonoBehaviour
     {
         _spriteRendererBg.sprite = _damagedSprites[_spriteIndex].spriteBackground;
         _spriteRendererFg.sprite = _damagedSprites[_spriteIndex].spriteForeground;
-        transform.localScale = Vector2.one * _damagedSprites[_spriteIndex].scale;
+        _spriteRendererFg.transform.localScale = Vector2.one * _damagedSprites[_spriteIndex].scale;
         _collider.radius = _damagedSprites[_spriteIndex].colliderRadius;
         _spriteIndex++;
     }
