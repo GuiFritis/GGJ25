@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class ChangeSpriteOnDamage : MonoBehaviour
+public class DamageFeedback : MonoBehaviour
 {
     [SerializeField] private Health _health;
     [SerializeField] private SpriteRenderer _spriteRendererBg;
