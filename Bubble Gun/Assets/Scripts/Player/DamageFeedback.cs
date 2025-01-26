@@ -56,6 +56,8 @@ public class DamageFeedback : MonoBehaviour
 
     private void DamageTaken(int currentHealth)
     {
+        _spriteRendererFg.DOKill();
+        _spriteRendererFg.transform.localScale = Vector3.one;
         _spriteRendererFg.transform.DOShakeScale(0.25f, 0.7f, 10, 10, true, ShakeRandomnessMode.Harmonic);
         if(_damagedSprites.Count > _spriteIndex && currentHealth == _damagedSprites[_spriteIndex].healthThreshold)
         {
