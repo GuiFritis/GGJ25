@@ -219,7 +219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 1 is a poping star!
+  m_text: Player 1 is a popping star!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f6d4adc0983708428de7cbb4be5e25d, type: 2}
   m_sharedMaterial: {fileID: 3144627030458150314, guid: 5f6d4adc0983708428de7cbb4be5e25d, type: 2}

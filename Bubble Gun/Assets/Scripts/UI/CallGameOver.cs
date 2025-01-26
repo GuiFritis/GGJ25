@@ -38,7 +38,7 @@ public class CallGameOver : MonoBehaviour
         if(health.TryGetComponent(out PlayerMovement player))
         {
             string text = player.PlayerId.ToString().Replace("_", " ");
-            _textMesh.text = $"{text} is a poping star!";
+            _textMesh.text = $"{text} is a popping star!";
         }
     }
 }
