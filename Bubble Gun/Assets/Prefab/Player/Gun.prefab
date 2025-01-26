@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAngle: 30
-  wobleSpeed: 1
+  wobleSpeed: 3
   target: {fileID: 0}
   gunPivot: {fileID: 7685432103946018980}
   FirePoint: {fileID: 5379737683839195530}
