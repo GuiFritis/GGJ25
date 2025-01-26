@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
 public class DoKill : MonoBehaviour
 {
     [SerializeField] private Health _health;
+    [Header("Pop Animation")]
     [SerializeField] private SpriteRenderer _spriteRendererBg;
     [SerializeField] private SpriteRenderer _spriteRendererFg;
     [SerializeField] private float _popScale;
+    [Space]
     [SerializeField] private Gun _gun;
+    [SerializeField] private ParticleSystem _deathVFX;
+    [SerializeField] private AudioClip _deathSFX;
 
     private void OnValidate()
     {
@@ -48,5 +49,7 @@ public class DoKill : MonoBehaviour
         transform.DOScale(Vector3.one * _popScale, .3f).SetEase(Ease.OutCubic).OnComplete(() => Destroy(gameObject));
         _spriteRendererBg.DOFade(0, .3f).SetEase(Ease.OutCubic);
         _spriteRendererFg.DOFade(0, .3f).SetEase(Ease.OutCubic);
+        Instantiate(_deathVFX, transform.position, _deathVFX.transform.rotation).Play();
+        // SFX_Pool.Instance.Play(_deathSFX);
     }
 }
