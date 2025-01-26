@@ -31,7 +31,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void StartMusic()
     {
-        _audioSource.Play();
+        _audioSource.Play(); 
     }
 
     private void OnDisable()

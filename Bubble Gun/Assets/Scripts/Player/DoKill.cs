@@ -49,7 +49,13 @@ public class DoKill : MonoBehaviour
         transform.DOScale(Vector3.one * _popScale, .3f).SetEase(Ease.OutCubic).OnComplete(() => Destroy(gameObject));
         _spriteRendererBg.DOFade(0, .3f).SetEase(Ease.OutCubic);
         _spriteRendererFg.DOFade(0, .3f).SetEase(Ease.OutCubic);
-        Instantiate(_deathVFX, transform.position, _deathVFX.transform.rotation).Play();
-        // SFX_Pool.Instance.Play(_deathSFX);
+        if(_deathVFX != null)
+        {
+            Instantiate(_deathVFX, transform.position, _deathVFX.transform.rotation).Play();
+        }
+        if(_deathSFX != null)
+        {
+            SFX_Pool.Instance.Play(_deathSFX);
+        }
     }
 }

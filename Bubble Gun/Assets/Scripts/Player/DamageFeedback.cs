@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class DamageFeedback : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DamageFeedback : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRendererBg;
     [SerializeField] private SpriteRenderer _spriteRendererFg;
     [SerializeField] private List<SpriteChange> _damagedSprites = new();
+    public static Action<DamageFeedback> OnSpriteChange;
     [Header("Damage feedback")]
     [SerializeField] private ParticleSystem _spriteChangeVFX;
     // [SerializeField] private float _scaleLossRate = 0.1f;
@@ -61,6 +63,7 @@ public class DamageFeedback : MonoBehaviour
         if(_damagedSprites.Count > _spriteIndex && currentHealth == _damagedSprites[_spriteIndex].healthThreshold)
         {
             SpriteChange();
+            OnSpriteChange?.Invoke(this);
             _spriteChangeVFX.Play();
         }
         // else

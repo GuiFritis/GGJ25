@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7611718318262324940}
   - component: {fileID: 2240384623556220265}
-  - component: {fileID: 1478016723999436371}
+  - component: {fileID: 5400894480601565440}
   m_Layer: 0
   m_Name: MusicPlayer
   m_TagString: Untagged
@@ -129,7 +129,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1478016723999436371
+--- !u!114 &5400894480601565440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,5 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 2240384623556220265}
-  _songs: []
+  _songs:
+  - {fileID: 8300000, guid: f39417076cd444e418c761dc8d638cb6, type: 3}
   _playOnAwake: 1

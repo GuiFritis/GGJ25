@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1fdcac8588db6435bbc3579b225fb9c8
+guid: d5d733e1d5cf34e96b772f0ae87cb592
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,11 +106,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite-bolhas-personagem-Back_0
+      name: bolha-mapa_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e932daea27bcc4bf2acca0fcd99545d8
-      internalID: -1600491757
+      spriteID: 9821b3b7b92782241994f56c1c1d8953
+      internalID: -1245424486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-bolhas-personagem-Back_1
+      name: bolha-mapa_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecc80e3eeeb35451b9b8240aafad7b76
-      internalID: -1491948355
+      spriteID: 1a224969246292797b2e20baf0837e85
+      internalID: -2056276981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-bolhas-personagem-Back_2
+      name: bolha-mapa_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,8 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f70b0d11aca4bd2a3e2aa2ac8bbc6b
-      internalID: 656143131
+      spriteID: 898915f6608b491b995e93d01f38f7c6
+      internalID: 841695810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolha-mapa_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3490f81de894b9c81aa995541ca69c
+      internalID: 1758835102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolha-mapa_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f7bbc0527435bd28b0947574886b8c
+      internalID: 371543801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolha-mapa_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366812f1dc08a0e5591840142cdcc8d3
+      internalID: -415690967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolha-mapa_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e864d8e2a77ab84279682e144f1bb5a1
+      internalID: 1669062075
       vertices: []
       indices: 
       edges: []
@@ -183,9 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite-bolhas-personagem-Back_0: -1600491757
-      sprite-bolhas-personagem-Back_1: -1491948355
-      sprite-bolhas-personagem-Back_2: 656143131
+      bolha-mapa_0: -1245424486
+      bolha-mapa_1: -2056276981
+      bolha-mapa_2: 841695810
+      bolha-mapa_3: 1758835102
+      bolha-mapa_4: 371543801
+      bolha-mapa_5: -415690967
+      bolha-mapa_6: 1669062075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
