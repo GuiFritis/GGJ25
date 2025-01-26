@@ -542,21 +542,21 @@ MonoBehaviour:
 
     <indent=6%>
 
-    Gui
-    Fritis
+    Arthur
+    Costa
 
     Bernard Rodrigues
 
+    Gui Fritis
+
     Lorran Henrique Rezende
 
-    Lorran Sutter
-
-    Vinicius
-    Martins
-
-    Arthur Costa
+    Lorran
+    Sutter
 
     Victor Hugo Castilho
+
+    Vinicius Martins
 
     </indent>'
   m_isRightToLeft: 0
@@ -1388,7 +1388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 1
-  Transition: {fileID: 0}
 --- !u!114 &1285343876
 MonoBehaviour:
   m_ObjectHideFlags: 0
