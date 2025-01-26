@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41603bad183628c47a8952f06755a08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cheerSFX: {fileID: 0}
+  _cheerSFX: {fileID: 11400000, guid: 17ca604a3fb0b2c4b94e3a507db88eb7, type: 2}
   _cheerVFX: {fileID: 0}
   _crowd:
   - {fileID: 8012767855340649960}

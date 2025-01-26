@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Crowd : MonoBehaviour
 {
-    [SerializeField] private AudioClip _cheerSFX;
+    [SerializeField] private SOAudio _cheerSFX;
     [SerializeField] private ParticleSystem _cheerVFX;
     [SerializeField] private List<Transform> _crowd;
     [SerializeField] private List<Color> _colors;
