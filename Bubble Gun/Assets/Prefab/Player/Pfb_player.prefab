@@ -240,12 +240,12 @@ MonoBehaviour:
   - spriteBackground: {fileID: -1491948355, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
     spriteForeground: {fileID: 1232044577, guid: 45754e06d749c49c29fa713a5494e526, type: 3}
     healthThreshold: 8
-    scale: 0.8
+    scale: 0.9
     colliderRadius: 0.06
   - spriteBackground: {fileID: -1600491757, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
     spriteForeground: {fileID: -805242811, guid: 45754e06d749c49c29fa713a5494e526, type: 3}
     healthThreshold: 4
-    scale: 0.7
+    scale: 1
     colliderRadius: 0.04
   - spriteBackground: {fileID: 656143131, guid: 1fdcac8588db6435bbc3579b225fb9c8, type: 3}
     spriteForeground: {fileID: 794974070, guid: 45754e06d749c49c29fa713a5494e526, type: 3}

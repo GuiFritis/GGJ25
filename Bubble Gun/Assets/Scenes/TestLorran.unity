@@ -1016,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_Name
-      value: Circle2
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_Layer
@@ -1188,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_Name
-      value: Circle1
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 1267682550451374366, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: m_Layer
