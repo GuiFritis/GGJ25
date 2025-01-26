@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour, IButtonDelayed
 {
     [SerializeField] private int _sceneIndex;
+    [SerializeField] public Animator Transition;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class ChangeScene : MonoBehaviour, IButtonDelayed
 
     public void ChangeSceneByIndex()
     {
+        Transition.SetTrigger("Start");
         SceneManager.LoadScene(_sceneIndex);        
     }
 }
