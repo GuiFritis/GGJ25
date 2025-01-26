@@ -157,7 +157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5015583348912457263}
+      - m_Target: {fileID: 3296305624265295702}
         m_TargetAssemblyTypeName: SetPlayerColor, Assembly-CSharp
         m_MethodName: SetColor
         m_Mode: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5015583348912457263}
+      - m_Target: {fileID: 1139364911706908908}
         m_TargetAssemblyTypeName: SetPlayerColor, Assembly-CSharp
         m_MethodName: SetColor
         m_Mode: 1
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5015583348912457263}
+      - m_Target: {fileID: 6974437666680489475}
         m_TargetAssemblyTypeName: SetPlayerColor, Assembly-CSharp
         m_MethodName: SetColor
         m_Mode: 1
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5015583348912457263}
+      - m_Target: {fileID: 6455471584688706380}
         m_TargetAssemblyTypeName: SetPlayerColor, Assembly-CSharp
         m_MethodName: SetColor
         m_Mode: 1
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5015583348912457263}
+      - m_Target: {fileID: 3196934190109727582}
         m_TargetAssemblyTypeName: SetPlayerColor, Assembly-CSharp
         m_MethodName: SetColor
         m_Mode: 1
