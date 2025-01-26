@@ -6,10 +6,13 @@ using DG.Tweening;
 public class DamageFeedback : MonoBehaviour
 {
     [SerializeField] private Health _health;
+    [SerializeField] private CircleCollider2D _collider;
+    [Header("Sprite change")]
     [SerializeField] private SpriteRenderer _spriteRendererBg;
     [SerializeField] private SpriteRenderer _spriteRendererFg;
-    [SerializeField] private CircleCollider2D _collider;
     [SerializeField] private List<SpriteChange> _damagedSprites = new();
+    [Header("Damage feedback")]
+    [SerializeField] private ParticleSystem _spriteChangeVFX;
     // [SerializeField] private float _scaleLossRate = 0.1f;
     // [SerializeField] private float _colliderLossRate = 0.01f;
     private int _spriteIndex = 0;
@@ -56,6 +59,7 @@ public class DamageFeedback : MonoBehaviour
         if(_damagedSprites.Count > _spriteIndex && currentHealth == _damagedSprites[_spriteIndex].healthThreshold)
         {
             SpriteChange();
+            _spriteChangeVFX.Play();
         }
         // else
         // {

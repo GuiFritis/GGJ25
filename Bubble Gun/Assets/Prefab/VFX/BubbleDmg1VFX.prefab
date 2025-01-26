@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3790202219508309261}
   - component: {fileID: 5385595148794644595}
   m_Layer: 0
-  m_Name: BubblePopVFX
+  m_Name: BubbleDmg1VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,8 +287,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
-      minScalar: 0.2
+      scalar: 0.23
+      minScalar: 0.13
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -979,9 +979,9 @@ ParticleSystem:
       time: 0
       countCurve:
         serializedVersion: 2
-        minMaxState: 3
+        minMaxState: 0
         scalar: 5
-        minScalar: 9
+        minScalar: 10
         maxCurve:
           serializedVersion: 2
           m_Curve:
