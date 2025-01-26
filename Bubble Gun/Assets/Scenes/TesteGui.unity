@@ -1371,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6713022001602325505, guid: 6d6d9ae5590a6d9449f048071e1096d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1527,6 +1527,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2081450429}
+    - target: {fileID: 7273087204911980638, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: _painSFX
+      value: 
+      objectReference: {fileID: 11400000, guid: 04a31566d787289439f743837f921d6d, type: 2}
     - target: {fileID: 8212477461472567572, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
       propertyPath: _playerId
       value: 1
@@ -1953,6 +1957,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 673193121}
+    - target: {fileID: 7273087204911980638, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}
+      propertyPath: _painSFX
+      value: 
+      objectReference: {fileID: 11400000, guid: c00673508ca75d74097819aae5c42b6b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2055,6 +2063,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 158879770537033854, guid: ae4d83f5abc95954080adc8305580edc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806221788176925531, guid: ae4d83f5abc95954080adc8305580edc, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881872770203427979, guid: ae4d83f5abc95954080adc8305580edc, type: 3}

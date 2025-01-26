@@ -275,6 +275,8 @@ MonoBehaviour:
     scale: 0.8
     colliderRadius: 0
   _spriteChangeVFX: {fileID: 1385465593846565095}
+  _painSFX: {fileID: 0}
+  _hitSFX: {fileID: 11400000, guid: 2f4390f6b93ac764197138e92c2d3dfc, type: 2}
 --- !u!114 &2411553471877381608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +295,7 @@ MonoBehaviour:
   _popScale: 2
   _gun: {fileID: 4784391419040902450}
   _deathVFX: {fileID: 3790202219508309261, guid: 0ea5ae3bf5b84364b813f8d14cd97b29, type: 3}
-  _deathSFX: {fileID: 0}
+  _deathSFX: {fileID: 11400000, guid: d3fff60f40379be4b896a5c8d23d790e, type: 2}
   anim: {fileID: 8935650040240249748}
 --- !u!1 &2223641544048027900
 GameObject:

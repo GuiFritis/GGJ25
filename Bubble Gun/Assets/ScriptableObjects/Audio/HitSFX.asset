@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e15b776e2a87874b8861498fdeaf744, type: 3}
-  m_Name: BubblePopMenu
+  m_Name: HitSFX
   m_EditorClassIdentifier: 
-  audioClips: []
-  pitch: 100
-  randomizePith: 0
-  pitchRange: 0
+  audioClips:
+  - {fileID: 8300000, guid: 366f674a09613c945acb5a8f3556e713, type: 3}
+  pitch: 110
+  randomizePith: 1
+  pitchRange: 20
   volume: 0

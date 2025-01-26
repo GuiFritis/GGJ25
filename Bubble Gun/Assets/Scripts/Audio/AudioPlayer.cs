@@ -23,13 +23,14 @@ public class AudioPlayer : MonoBehaviour, IPoolItem
 
     public void PlayAudioSO(SOAudio soAudio)
     {
-        _audioSource.clip = soAudio.audioClips.GetRandom();
         _audioSource.volume = soAudio.volume;
         _audioSource.pitch = soAudio.pitch;
         if(soAudio.randomizePith)
         {
             _audioSource.pitch += Random.Range(-soAudio.pitchRange, soAudio.pitchRange);
         }
+        _audioSource.clip = soAudio.audioClips.GetRandom();
+        _audioSource.Play();
     }
 
     public void GetFromPool()

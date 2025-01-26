@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e15b776e2a87874b8861498fdeaf744, type: 3}
+  m_Name: PainPlayer1SFX
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: ab950f59002af7c489ed0877aa5284c0, type: 3}
+  - {fileID: 8300000, guid: 4c880e78c047e164c96be1147c6bc565, type: 3}
+  - {fileID: 8300000, guid: 4cf27b59bae6c0947a603d5b43bb3b5b, type: 3}
+  - {fileID: 8300000, guid: a602e0d37cc13b94781e66a9d859808c, type: 3}
+  - {fileID: 8300000, guid: a8be7072d9c62b147ac563c50873abf2, type: 3}
+  - {fileID: 8300000, guid: 60424d0eebb85934d8d8c2c2d521394e, type: 3}
+  - {fileID: 8300000, guid: f3be39cedb176944b984c4f93ea4fce6, type: 3}
+  - {fileID: 8300000, guid: 420190148777395488eb384cb4c175a9, type: 3}
+  pitch: 50
+  randomizePith: 1
+  pitchRange: 8
+  volume: 0

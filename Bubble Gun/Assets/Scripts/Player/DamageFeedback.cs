@@ -15,6 +15,8 @@ public class DamageFeedback : MonoBehaviour
     public static Action<DamageFeedback> OnSpriteChange;
     [Header("Damage feedback")]
     [SerializeField] private ParticleSystem _spriteChangeVFX;
+    [SerializeField] private SOAudio _painSFX;
+    [SerializeField] private SOAudio _hitSFX;
     // [SerializeField] private float _scaleLossRate = 0.1f;
     // [SerializeField] private float _colliderLossRate = 0.01f;
     private int _spriteIndex = 0;
@@ -60,21 +62,20 @@ public class DamageFeedback : MonoBehaviour
     {
         _spriteRendererFg.DOKill();
         _spriteRendererFg.transform.DOShakeScale(0.25f, 0.7f, 10, 10, true, ShakeRandomnessMode.Harmonic);
+        if(_painSFX != null)
+        {
+            SFX_Pool.Instance.Play(_painSFX);
+        }
+        if(_hitSFX != null)
+        {
+            SFX_Pool.Instance.Play(_hitSFX);
+        }
         if(_damagedSprites.Count > _spriteIndex && currentHealth == _damagedSprites[_spriteIndex].healthThreshold)
         {
             SpriteChange();
             OnSpriteChange?.Invoke(this);
             _spriteChangeVFX.Play();
         }
-        // else
-        // {
-            // transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
-            // _spriteRendererFg.transform.localScale -= (Vector3)Vector2.one * _scaleLossRate;
-            // _collider.radius -= _colliderLossRate;
-            // We tried to use DOTween here, but it didn't work as expected
-            // transform.DOKill();
-            // transform.DOScale(-(Vector3)Vector2.one * _scaleLossRate, .1f).SetEase(Ease.InOutElastic).SetRelative(true);
-        // }
     }
 
     private void SpriteChange()

@@ -15,6 +15,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     private float tempoDecorrido;
     [SerializeField]private float coolDownTime;
+    [Header("FX")]
+    [SerializeField] private SOAudio _shotSFX;
+    [SerializeField] private ParticleSystem _shotVFX;
 
     void Start()
     {
@@ -40,24 +43,28 @@ public class Gun : MonoBehaviour
         tempoDecorrido += Time.deltaTime;
     }
 
-    private void shoot(InputAction.CallbackContext context)
+    private void Shoot(InputAction.CallbackContext context)
     {
         if(tempoDecorrido >= coolDownTime){
             tempoDecorrido = 0;
             Projetil projetil = ProjetilPool.Instance.GetPoolItem();
             projetil.transform.position = FirePoint.position;
             projetil.transform.rotation = gunPivot.transform.rotation;
+            if(_shotSFX != null)
+            {
+                SFX_Pool.Instance.Play(_shotSFX);
+            }
         }
     }
 
      private void SetPlayer1Inputs()
     {
-        _inputs.Player1.Shoot.started += shoot;
+        _inputs.Player1.Shoot.started += Shoot;
         
     }
       private void SetPlayer2Inputs()
     {
-        _inputs.Player2.Shoot.started += shoot;
+        _inputs.Player2.Shoot.started += Shoot;
         
     }
         private void SetInputs()

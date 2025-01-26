@@ -10,7 +10,7 @@ public class DoKill : MonoBehaviour
     [Space]
     [SerializeField] private Gun _gun;
     [SerializeField] private ParticleSystem _deathVFX;
-    [SerializeField] private AudioClip _deathSFX;
+    [SerializeField] private SOAudio _deathSFX;
     [SerializeField] private Animator anim;
 
     private void OnValidate()
@@ -49,7 +49,7 @@ public class DoKill : MonoBehaviour
         transform.DOKill();
         _spriteRendererBg.DOKill();
         _spriteRendererFg.DOKill();
-        transform.DOScale(Vector3.one * _popScale, .3f).SetEase(Ease.OutCubic).OnComplete(() => Destroy(gameObject));
+        transform.DOScale(Vector3.one * _popScale, .3f).SetEase(Ease.OutCubic);
         _spriteRendererBg.DOFade(0, .3f).SetEase(Ease.OutCubic);
         _spriteRendererFg.DOFade(0, .3f).SetEase(Ease.OutCubic);
         if(_deathVFX != null)
