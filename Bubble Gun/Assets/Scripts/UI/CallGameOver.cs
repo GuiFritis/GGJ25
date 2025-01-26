@@ -9,6 +9,9 @@ public class CallGameOver : MonoBehaviour
     [SerializeField] private List<Health> _playerHp;
     [SerializeField] private TextMeshProUGUI _textMesh;
     [SerializeField] private GameObject _gameObject;
+    [Header("Music")]
+    [SerializeField] private MusicPlayer _musicPlayer;
+    [SerializeField] private AudioClip _victorySong;
 
     private void OnValidate()
     {
@@ -29,6 +32,7 @@ public class CallGameOver : MonoBehaviour
     private void GameOver(Health hp)
     {
         _gameObject.SetActive(true);
+        _musicPlayer.OverrideSongs(_victorySong);
         Health health = _playerHp.Find(i => !i.Equals(hp));
         if(health.TryGetComponent(out PlayerMovement player))
         {

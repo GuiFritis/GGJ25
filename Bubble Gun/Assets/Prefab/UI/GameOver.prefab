@@ -619,6 +619,8 @@ MonoBehaviour:
   - {fileID: 0}
   _textMesh: {fileID: 4129036645128098724}
   _gameObject: {fileID: 806221788176925531}
+  _musicPlayer: {fileID: 0}
+  _victorySong: {fileID: 8300000, guid: 8602912d0ecc3f14e8c0848b81cb185a, type: 3}
 --- !u!1 &5674512856372019005
 GameObject:
   m_ObjectHideFlags: 0

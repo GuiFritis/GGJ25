@@ -2797,6 +2797,10 @@ PrefabInstance:
       value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 8545517608201089185, guid: ae4d83f5abc95954080adc8305580edc, type: 3}
+      propertyPath: _musicPlayer
+      value: 
+      objectReference: {fileID: 2065923610}
+    - target: {fileID: 8545517608201089185, guid: ae4d83f5abc95954080adc8305580edc, type: 3}
       propertyPath: _playerHp.Array.data[0]
       value: 
       objectReference: {fileID: 4355820927035206064}
@@ -11317,6 +11321,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2065923610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5400894480601565440, guid: 6594c3a88d4bb7f4bb66d8adb2b9728a, type: 3}
+  m_PrefabInstance: {fileID: 1336134116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f9d158c6a154b42806b1f91c9fcdbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2081450429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 46323454578981701, guid: 7fb56c1be6c07401b9bb8a717384aaa7, type: 3}

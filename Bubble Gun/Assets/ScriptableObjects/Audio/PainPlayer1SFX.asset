@@ -24,4 +24,4 @@ MonoBehaviour:
   pitch: 0.6
   randomizePith: 1
   pitchRange: 0.1
-  volume: 0.9
+  volume: 0.96
