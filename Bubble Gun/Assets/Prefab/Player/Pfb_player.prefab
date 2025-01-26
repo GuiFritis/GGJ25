@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854804035604536873}
   - component: {fileID: 77744718152952494}
+  - component: {fileID: 8935650040240249748}
   m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
@@ -85,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8935650040240249748
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940679049298656445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1536f6ab35bf8cd4a981705d40a57116, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1267682550451374366
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3f2673b98bb464da51ef83cc98a3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 12
+  _maxHealth: 2
   AlmostDeadColor: {r: 0.39860737, g: 0, b: 0, a: 1}
 --- !u!58 &4548868596297823442
 CircleCollider2D:
@@ -272,6 +294,7 @@ MonoBehaviour:
   _gun: {fileID: 4784391419040902450}
   _deathVFX: {fileID: 3790202219508309261, guid: 0ea5ae3bf5b84364b813f8d14cd97b29, type: 3}
   _deathSFX: {fileID: 0}
+  anim: {fileID: 8935650040240249748}
 --- !u!1 &2223641544048027900
 GameObject:
   m_ObjectHideFlags: 0
