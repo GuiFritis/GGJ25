@@ -169,7 +169,7 @@ MonoBehaviour:
   gunPivot: {fileID: 7685432103946018980}
   FirePoint: {fileID: 5379737683839195530}
   _playerMovement: {fileID: 0}
-  coolDownTime: 0.34
+  coolDownTime: 0.25
   _shotSFX: {fileID: 11400000, guid: af8128bc0bf2a6c4e983f36205851f32, type: 2}
   _shotVFX: {fileID: 0}
 --- !u!1 &6342512860959920866
