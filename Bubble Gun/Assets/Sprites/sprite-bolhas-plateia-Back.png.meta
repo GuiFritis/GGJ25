@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18619cbf046d64d4c9762bd65bef5f1b
+guid: ca54508757a384494bf15ed8728a2e00
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -106,32 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -150,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b77b4053d2ef6444906afd9775a8404
-      internalID: 1412656356
+      spriteID: 776f06fe67dfb48dba829829c60615d3
+      internalID: 1802177062
       vertices: []
       indices: 
       edges: []
@@ -171,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267e848a07cf16c4c8c4b4e0795c47be
-      internalID: 37845409
+      spriteID: 8db1ace85f0b848c887ed81f9618e77f
+      internalID: -1303061820
       vertices: []
       indices: 
       edges: []
@@ -192,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5da2110efca038444a130466c0a9cf52
-      internalID: 1033338678
+      spriteID: 98149034122884827ac1f0a0a1ea451a
+      internalID: -1132847331
       vertices: []
       indices: 
       edges: []
@@ -209,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite-bolhas-plateia-Back_0: 1412656356
-      sprite-bolhas-plateia-Back_1: 37845409
-      sprite-bolhas-plateia-Back_2: 1033338678
+      sprite-bolhas-plateia-Back_0: 1802177062
+      sprite-bolhas-plateia-Back_1: -1303061820
+      sprite-bolhas-plateia-Back_2: -1132847331
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

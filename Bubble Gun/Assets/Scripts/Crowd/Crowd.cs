@@ -8,10 +8,34 @@ public class Crowd : MonoBehaviour
     [SerializeField] private AudioClip _cheerSFX;
     [SerializeField] private ParticleSystem _cheerVFX;
     [SerializeField] private List<Transform> _crowd;
+    [SerializeField] private List<Color> _colors;
 
     void Start()
     {
-        DamageFeedback.OnSpriteChange += CrowdCheer;       
+        DamageFeedback.OnSpriteChange += CrowdCheer;
+
+        for (int i = 0; i < _crowd.Count; i++)
+        {
+            Transform crowdPerson = _crowd[i];
+            Color color = _colors[i % _colors.Count]; // This ensures we loop back to the start of _colors if _crowd is larger
+            Renderer renderer = crowdPerson.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                renderer.material.color = color;
+            }
+            else
+            {
+                Debug.LogWarning($"Renderer not found on crowd person {i}");
+            }
+        }
+    }
+
+    void Update()
+    {
+        foreach (Transform crowdPerson in _crowd)
+        {
+            crowdPerson.DOShakeScale(.2f, 0.6f);
+        }
     }
     
     private void CrowdCheer(DamageFeedback damageFeedback)
