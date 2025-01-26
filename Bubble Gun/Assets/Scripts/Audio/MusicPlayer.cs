@@ -46,13 +46,4 @@ public class MusicPlayer : MonoBehaviour
         _audioSource.DOKill();
         _audioSource.DOFade(_volume, 1f);
     }
-
-    public void OverrideSongs(AudioClip song)
-    {
-        _audioSource.Stop();
-        _songs.Clear();
-        _songs.Add(song);
-        _audioSource.clip = song;
-        StartMusic();
-    }
 }
