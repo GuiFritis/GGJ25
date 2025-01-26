@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1630257189958193868
 RectTransform:
   m_ObjectHideFlags: 0
@@ -633,6 +633,8 @@ GameObject:
   - component: {fileID: 1223274275794892206}
   - component: {fileID: 1223996942544022351}
   - component: {fileID: 2967158394556431256}
+  - component: {fileID: 4706982370891341896}
+  - component: {fileID: 2248701057362182463}
   m_Layer: 5
   m_Name: PlayAgainButton
   m_TagString: Untagged
@@ -742,10 +744,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223996942544022351}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: ChangeSceneByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 4706982370891341896}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -778,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c817f078bd55348b8e44cfbd728451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneIndex: 1
 --- !u!114 &2967158394556431256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +794,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soAudio: {fileID: 11400000, guid: 941d5ca3a1ff8cd46888b3cd7b226caf, type: 2}
+--- !u!114 &4706982370891341896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674512856372019005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 2248701057362182463}
+--- !u!95 &2248701057362182463
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674512856372019005}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6633ae92e2c6b424cb01ff8c3dc981b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6502965010393939387
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +842,8 @@ GameObject:
   - component: {fileID: 8005697414041233529}
   - component: {fileID: 5470769849949608411}
   - component: {fileID: 5912010270643906332}
+  - component: {fileID: 5180769375669100952}
+  - component: {fileID: 7141334860050513117}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -914,10 +953,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5470769849949608411}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: ChangeSceneByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 5180769375669100952}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -950,6 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c817f078bd55348b8e44cfbd728451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneIndex: 0
 --- !u!114 &5912010270643906332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,3 +1003,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soAudio: {fileID: 11400000, guid: 941d5ca3a1ff8cd46888b3cd7b226caf, type: 2}
+--- !u!114 &5180769375669100952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502965010393939387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7141334860050513117}
+--- !u!95 &7141334860050513117
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502965010393939387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6633ae92e2c6b424cb01ff8c3dc981b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

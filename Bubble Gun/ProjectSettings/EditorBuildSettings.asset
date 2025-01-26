@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/TestLorran.unity
-    guid: 091db51eb2689444ea215d00c2db903e
+    path: Assets/Scenes/FinalArenaScene.unity
+    guid: 2577d753f3c2e47afa5a85c57a3180ce
   m_configObjects: {}
