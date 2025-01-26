@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ShotSFX
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 5519f88f7b1869441965e88fcf1978c1, type: 3}
-  pitch: 105
+  - {fileID: 8300000, guid: 4f58c95b63a976148b46eb56ca17eec3, type: 3}
+  pitch: 1
   randomizePith: 1
-  pitchRange: 15
-  volume: 0
+  pitchRange: 0.2
+  volume: 0.75

@@ -2,22 +2,22 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class ChangeScene : MonoBehaviour, IButtonDelayed
 {
-    [SerializeField] private Animator anim;
-    [SerializeField] private GameObject textButton;
-    public void ChangeSceneByIndex(int sceneIndex)
+    [SerializeField] private int _sceneIndex;
+
+    private void Start()
     {
-        anim.SetTrigger("Clicked");
-        //textButton.SetActive(false);
-        StartCoroutine(ChangeSceneDelay(sceneIndex));
-        
+        SetUpButtonDelay();
     }
 
-    IEnumerator ChangeSceneDelay(int sceneIndex)
+    public void SetUpButtonDelay()
     {
-        yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene(sceneIndex);
+        GetComponent<ButtonAnimationHelper>().OnAnimationFinished += ChangeSceneByIndex;
+    }
 
+    public void ChangeSceneByIndex()
+    {
+        SceneManager.LoadScene(_sceneIndex);        
     }
 }

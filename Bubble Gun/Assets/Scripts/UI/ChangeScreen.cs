@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeScreen : MonoBehaviour
+public class ChangeScreen : MonoBehaviour, IButtonDelayed
 {
-    [SerializeField] private GameObject _mainMenuScreen;
-    [SerializeField] private GameObject _creditsScreen;
+    [SerializeField] private GameObject _hideScreen;
+    [SerializeField] private GameObject _showScreen;
 
-    public void ShowCredits()
+    private void Start()
     {
-        _mainMenuScreen.SetActive(false);
-        _creditsScreen.SetActive(true);
+        SetUpButtonDelay();
+    }
+    
+    public void SetUpButtonDelay()
+    {
+        GetComponent<ButtonAnimationHelper>().OnAnimationFinished += ShowScreen;
     }
 
-    public void HideCredits()
+    public void ShowScreen()
     {
-        _creditsScreen.SetActive(false);
-        _mainMenuScreen.SetActive(true);
+        _hideScreen.SetActive(false);
+        _showScreen.SetActive(true);
     }
 }

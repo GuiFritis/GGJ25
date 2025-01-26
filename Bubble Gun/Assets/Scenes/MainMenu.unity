@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 75579555}
   - component: {fileID: 75579554}
   - component: {fileID: 75579558}
+  - component: {fileID: 75579560}
+  - component: {fileID: 75579559}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -176,8 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85f86f017568ee4a83b8c471c0845d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenuScreen: {fileID: 1548260974}
-  _creditsScreen: {fileID: 381568392}
+  _hideScreen: {fileID: 381568392}
+  _showScreen: {fileID: 1548260974}
 --- !u!114 &75579555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,9 +224,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 75579554}
-        m_TargetAssemblyTypeName: ChangeScreen, Assembly-CSharp
-        m_MethodName: HideCredits
+      - m_Target: {fileID: 75579560}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -309,6 +311,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soAudio: {fileID: 11400000, guid: 941d5ca3a1ff8cd46888b3cd7b226caf, type: 2}
+--- !u!95 &75579559
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75579552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6633ae92e2c6b424cb01ff8c3dc981b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &75579560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75579552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 75579559}
 --- !u!1 &271127745
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +881,8 @@ GameObject:
   - component: {fileID: 1013621529}
   - component: {fileID: 1013621532}
   - component: {fileID: 1013621533}
+  - component: {fileID: 1013621535}
+  - component: {fileID: 1013621534}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -916,9 +954,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1013621532}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 1013621535}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1003,6 +1041,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soAudio: {fileID: 11400000, guid: 941d5ca3a1ff8cd46888b3cd7b226caf, type: 2}
+--- !u!95 &1013621534
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013621527}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6633ae92e2c6b424cb01ff8c3dc981b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1013621535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013621527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1013621534}
 --- !u!1 &1141678349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1221,7 @@ GameObject:
   - component: {fileID: 1285343878}
   - component: {fileID: 1285343877}
   - component: {fileID: 1285343876}
+  - component: {fileID: 1285343881}
   - component: {fileID: 1285343875}
   - component: {fileID: 1285343879}
   - component: {fileID: 1285343880}
@@ -1191,8 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c817f078bd55348b8e44cfbd728451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1285343880}
-  textButton: {fileID: 1141678349}
+  _sceneIndex: 1
 --- !u!114 &1285343876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,10 +1309,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1285343875}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: ChangeSceneByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 1285343881}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1333,6 +1405,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1285343881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285343873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1285343880}
 --- !u!1 &1323712640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1634,8 @@ GameObject:
   - component: {fileID: 1522868829}
   - component: {fileID: 1522868832}
   - component: {fileID: 1522868833}
+  - component: {fileID: 1522868835}
+  - component: {fileID: 1522868834}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -1620,9 +1707,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1522868832}
-        m_TargetAssemblyTypeName: ChangeScreen, Assembly-CSharp
-        m_MethodName: ShowCredits
+      - m_Target: {fileID: 1522868835}
+        m_TargetAssemblyTypeName: ButtonAnimationHelper, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1706,8 +1793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85f86f017568ee4a83b8c471c0845d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenuScreen: {fileID: 1548260974}
-  _creditsScreen: {fileID: 381568392}
+  _hideScreen: {fileID: 1548260974}
+  _showScreen: {fileID: 381568392}
 --- !u!114 &1522868833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,6 +1808,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soAudio: {fileID: 11400000, guid: 941d5ca3a1ff8cd46888b3cd7b226caf, type: 2}
+--- !u!95 &1522868834
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522868827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6633ae92e2c6b424cb01ff8c3dc981b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1522868835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522868827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ff31d7776dd1428a531682912e6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1522868834}
 --- !u!1 &1548260974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5400894480601565440, guid: 6594c3a88d4bb7f4bb66d8adb2b9728a, type: 3}
+      propertyPath: _songs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a335688ab6114b469d77c95c252b510, type: 3}
     - target: {fileID: 7611718318262324940, guid: 6594c3a88d4bb7f4bb66d8adb2b9728a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.92379826
