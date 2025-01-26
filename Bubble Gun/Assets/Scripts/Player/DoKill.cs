@@ -41,7 +41,7 @@ public class DoKill : MonoBehaviour
         _health.OnKilled += Kill;
     }
 
-    private void Kill()
+    private void Kill(Health hp)
     {
 
         anim.SetTrigger("Death");

@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
 
 
     public Action<int> OnDamage;
-    public Action OnKilled;
+    public Action<Health> OnKilled;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         OnDamage?.Invoke(_currentHealth);
         if(_currentHealth <= 0)
         {
-            OnKilled?.Invoke();
+            OnKilled?.Invoke(this);
         }
         
     }
