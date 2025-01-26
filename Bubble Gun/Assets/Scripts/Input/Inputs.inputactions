@@ -69,7 +69,7 @@
                 },
                 {
                     "name": "1D Axis",
-                    "id": "e5f43371-68f6-4443-b52a-32b427d71b3f",
+                    "id": "96a3404d-a325-4ea7-85cf-9f2c6eb718ba",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -79,9 +79,20 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "negative",
+                    "id": "9959b4db-882c-45d1-ab7c-395a43bd4aaa",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Vertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "positive",
-                    "id": "bdbf8024-39aa-4228-b434-4f905d0bae86",
-                    "path": "<Joystick>/{Forward}",
+                    "id": "4ffef236-9431-425b-b9b3-248a12d69ca7",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -123,9 +134,53 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "3fb72f45-73a6-4ed6-b6e1-b0b528e6adce",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "46eb5f8e-ffcf-4d21-a441-2a333045e0d1",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "71ffc998-9efa-4ac9-9321-782b573ca75d",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move_Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "63d615fc-a328-47aa-91aa-190ec9cd783c",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d1d69c3-1c19-4a3a-964b-dada7a58629a",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
