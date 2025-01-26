@@ -344,6 +344,10 @@ PrefabInstance:
       value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 7375058974665536003, guid: c177426ca8a0e93499dc90a04aa1d674, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375058974665536003, guid: c177426ca8a0e93499dc90a04aa1d674, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
@@ -512,7 +516,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -738,7 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592435596}
   - component: {fileID: 1592435595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dome
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 public enum PlayerId
 {
@@ -16,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Inputs _inputs;
     [SerializeField] private PlayerId _playerId;
     public PlayerId PlayerId => _playerId;
+    [SerializeField] private LayerMask _hitLayer;
+    [SerializeField] private float _bounceForce;
+    [SerializeField] private float _bounceDuration;
 
     private void Start()
     {
@@ -71,5 +75,35 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         transform.Translate(_direction * _speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.LogWarning("Entrou aqui");
+        if ((_hitLayer.value & (1 << other.gameObject.layer)) > 0)
+        {
+            Debug.LogWarning("Acertou, miseravi");
+            if (other is EdgeCollider2D edgeCollider)
+            {
+                Vector2 hitPoint = edgeCollider.ClosestPoint(transform.position);
+                Debug.LogWarning($"Hit the edge at point: {hitPoint}");
+                OnHitEdge(edgeCollider, hitPoint);
+            }
+        }
+    }
+
+    private void OnHitEdge(EdgeCollider2D edgeCollider, Vector2 hitPoint)
+    {
+        // Add your logic for when the player hits the edge
+        // You can use the hitPoint for further calculations or visual effects
+
+        // Example: Draw a debug line to visualize the hit point
+        Debug.DrawLine(transform.position, hitPoint, Color.red, 1f);
+
+        Vector2 normal = -(hitPoint - (Vector2)transform.position).normalized;
+        Debug.LogWarning($"Normal {normal}");
+        // Add more logic here as needed
+
+        transform.DOMove(normal * _bounceForce, _bounceDuration).SetEase(Ease.OutBack).SetRelative(true);
     }
 }

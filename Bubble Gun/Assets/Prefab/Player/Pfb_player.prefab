@@ -139,6 +139,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1.5
   _playerId: 0
+  _hitLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _bounceForce: 0.15
+  _bounceDuration: 0.15
 --- !u!114 &2715898341896024955
 MonoBehaviour:
   m_ObjectHideFlags: 0
