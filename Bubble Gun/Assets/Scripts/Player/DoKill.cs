@@ -11,6 +11,7 @@ public class DoKill : MonoBehaviour
     [SerializeField] private Gun _gun;
     [SerializeField] private ParticleSystem _deathVFX;
     [SerializeField] private AudioClip _deathSFX;
+    [SerializeField] private Animator anim;
 
     private void OnValidate()
     {
@@ -42,6 +43,8 @@ public class DoKill : MonoBehaviour
 
     private void Kill()
     {
+
+        anim.SetTrigger("Death");
         _gun.gameObject.SetActive(false);
         transform.DOKill();
         _spriteRendererBg.DOKill();
