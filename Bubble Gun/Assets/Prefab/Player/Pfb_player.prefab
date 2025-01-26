@@ -497,14 +497,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
-      propertyPath: wobleSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
-      propertyPath: coolDownTime
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122603828125573611, guid: a170b9b477d5fc94a962c31d9a741d32, type: 3}
       propertyPath: _playerMovement
       value: 
       objectReference: {fileID: 8212477461472567572}
